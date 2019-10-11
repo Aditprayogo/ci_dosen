@@ -9,7 +9,7 @@ class Dosen_model extends CI_Model
         $this->table = "dosen";
     }
 
-    public function alldata()
+    public function alldata()   
     {
         # code...
         $this->db->select('*');

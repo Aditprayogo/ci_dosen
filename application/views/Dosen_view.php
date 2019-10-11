@@ -16,9 +16,7 @@
         <?php
 
             if (is_array($dosen)) {
-                # code...
-                
-            }
+                # code... 
         ?>
 
         <table class="table table-bordered">
@@ -35,7 +33,7 @@
         <tbody>
         <?php foreach ($dosen as $key => $value) {
             # code...
-        } ?>
+         ?>
             <tr>
             <th scope="row"><?= $value['nik'] ?></th>
             <td><?= $value['nama'] ?></td>
@@ -47,9 +45,10 @@
                 <a href="<?= site_url('Dosen/hapus/'. $value['nik']); ?>" class="btn btn-danger">Hapus</a>
             </td>
             </tr>
-        
+        <?php } ?>
         </tbody>
         </table>
+    <?php } ?>
     </div>
 </div>
 

@@ -23,6 +23,9 @@ class Dosen extends CI_Controller {
 
         $this->load->view('Dosen_view', $data);
     }
+
+
+    
     
     public function tambah()
     {
@@ -40,11 +43,11 @@ class Dosen extends CI_Controller {
         //pastikan tombol simpan di klik
         if ($this->input->post('tblsimpan')) {
             # code...
-            $data['nik'] = $this->inpot->post('nik');
-            $data['nama'] = $this->inpot->post('nama');
-            $data['alamat'] = $this->inpot->post('alamat');
-            $data['notelp'] = $this->inpot->post('notelp');
-            $data['jenkel'] = $this->inpot->post('jenkel');
+            $data['nik'] = $this->input->post('nik');
+            $data['nama'] = $this->input->post('nama');
+            $data['alamat'] = $this->input->post('alamat');
+            $data['notlp'] = $this->input->post('notlp');
+            $data['jenkel'] = $this->input->post('jenkel');
 
             //validasi form
             $this->form_validation->set_rules('nik', 'NIK', 'required|is_unique[dosen.nik]');
@@ -94,7 +97,7 @@ class Dosen extends CI_Controller {
             $nik = $this->input->post('nik');
             $data['nama'] = $this->input->post('nama');
             $data['alamat'] = $this->input->post('alamat');
-            $data['notelp'] = $this->input->post('notelp');
+            $data['notlp'] = $this->input->post('notlp');
             $data['jenkel'] = $this->input->post('jenkel');
 
              // validasi dulu
