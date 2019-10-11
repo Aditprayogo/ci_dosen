@@ -18,41 +18,39 @@
     
     <div class="row mt-3">
 
-       
-    
         <span style="color:red"><?= validation_errors(); ?></span>
 
         <?= form_open('Dosen/simpan');  ?>
 
-        NIK : <input type="text" name="nik" id="nik" required>
+            NIK : <input type="text" name="nik" id="nik" required>
 
-        <br><br>
+            <br><br>
 
-        Nama : <?php
+            Nama : <?php
 
-        $data = [
-            'name' => 'nama',
-            'id' => 'nama',
-            'required' => 'required'
-        ];
-        
-        echo form_input($data);
-        ?>
-        <br><br>
+            $data = [
+                'name' => 'nama',
+                'id' => 'nama',
+                'required' => 'required'
+            ];
+            
+            echo form_input($data);
+            ?>
+            <br><br>
 
-        Alamat : <input type="text" name="alamat" id="alamat">
+            Alamat : <input type="text" name="alamat" id="alamat">
 
-        <br><br>
+            <br><br>
 
-        No Tlp : <input type="text" name="notlp" id="notlp">
+            No Tlp : <input type="text" name="notlp" id="notlp">
 
-        <br><br>
+            <br><br>
 
-        Jenis Kelamin : <?php echo form_dropdown('jenkel', $jenkel); ?>
+            Jenis Kelamin : <?php echo form_dropdown('jenkel', $jenkel); ?>
 
-        <br><br>
+            <br><br>
 
-        <input type="submit" name="tblsimpan" value="Simpan">
+            <input type="submit" name="tblsimpan" value="Simpan">
 
         <?= form_close() ?>
 
