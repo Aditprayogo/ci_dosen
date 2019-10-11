@@ -86,5 +86,37 @@ class Dosen extends CI_Controller {
 
     }
 
+    public function prosesubah()
+    {
+        # code...
+        if ($this->input->post('tblsimpan')) {
+            # code...
+            $nik = $this->input->post('nik');
+            $data['nama'] = $this->input->post('nama');
+            $data['alamat'] = $this->input->post('alamat');
+            $data['notelp'] = $this->input->post('notelp');
+            $data['jenkel'] = $this->input->post('jenkel');
+
+             // validasi dulu
+            $this->form_validation->set_rules('nama', 'NAMA', 'required');
+            $this->form_validation->set_rules('alamat', 'ALAMAT', 'required');
+            $this->form_validation->set_rules('jenkel', 'Jenis Kelamin', 'required');
+
+            if ($this->form_validation->run() == true) {
+                # code...
+                $simpan = $this->Dosen_model->ubah($data, $nik);
+                redirect('Dosen');
+            }
+
+        } else {
+
+            redirect('Dosen');
+
+        }
+
+       
+
+    }
+
 
 }
