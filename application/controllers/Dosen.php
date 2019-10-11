@@ -6,7 +6,7 @@ class Dosen extends CI_Controller {
 	public function __construct()
     {
         # code...
-        parrent::__construct();
+        parent::__construct();
 
         $this->data['jenkel'] = ['L' => 'Laki-laki', 'P'=>'Perempuan'];
     }
